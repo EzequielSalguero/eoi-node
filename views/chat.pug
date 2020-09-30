@@ -3,9 +3,9 @@ extends layout.pug
 block content
     ul#messages
 
-    form(onsubmit="return sendMessage(this)")
+    form
         input#message_input(type="text", name="message")
-        input(type="submit", value="Enviar")
+        button(onclick="return sendMenssage(this)")= "Enviar"
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js")
     script(src="main.js")
